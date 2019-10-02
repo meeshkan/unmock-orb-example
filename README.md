@@ -11,7 +11,8 @@ This is a Node.js application running an [Express](https://expressjs.com/) serve
 1. Create a new personal GitHub [access token](https://github.com/settings/tokens) with read access to your repositories
 1. Set the environment variable `GITHUB_TOKEN` in `.env` file (see `.env.example` for an example)
 1. Install dependencies: `yarn` (or `npm i`)
-1. Run the development server: `yarn dev`, or build the app and run with `NODE_ENV=production`: `yarn build && yarn start`
+1. Run the development server with hot reloading: `yarn dev`
+1. To build the app and run in production mode: `yarn build && yarn start`
 
 ### Running tests
 
