@@ -26,3 +26,7 @@ $ yarn test
 ```
 
 Running tests **does not require creating a GitHub access token**: they use Unmock to mock calls to the GitHub API!
+
+### See the orb in action
+
+Take a look at PR [#1](https://github.com/unmock/unmock-orb-example/pull/1). The orb publishes Unmock test report and sends a link to the report for inspection.
