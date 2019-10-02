@@ -23,4 +23,4 @@ Run tests:
 $ yarn test
 ```
 
-Running tests **does not require creating a GitHub access token**: they use Unmock to mock the GitHub API calls!
+Running tests **does not require creating a GitHub access token**: they use Unmock to mock calls to the GitHub API!
