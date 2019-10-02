@@ -3,7 +3,7 @@ import * as winston from 'winston';
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.json(),
-  defaultMeta: { service: 'startup-school-workshop' },
+  defaultMeta: { service: 'unmock-orb-example' },
   transports: [
     new winston.transports.Console(),
   ],

@@ -1,5 +1,5 @@
 {
-  "name": "shortcut-startup-school-workshop",
+  "name": "unmock-orb-example",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unmock/shortcut-startup-school-workshop"
+    "url": "https://github.com/unmock/unmock-orb-example"
   },
   "keywords": [],
   "author": "",
