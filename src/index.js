@@ -1,5 +1,3 @@
-
-// eslint-disable-line
 import compression from 'compression';
 import express from 'express';
 import path from 'path';

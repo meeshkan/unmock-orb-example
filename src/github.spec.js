@@ -1,3 +1,4 @@
+/* global describe, beforeAll, afterAll, beforeEach, it */
 import unmock, { transform } from 'unmock';
 import fetchGitHubRepos from './github';
 
