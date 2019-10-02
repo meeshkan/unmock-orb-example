@@ -12,6 +12,7 @@ This is a Node.js application running an [Express](https://expressjs.com/) serve
 1. Set the environment variable `GITHUB_TOKEN` in `.env` file (see `.env.example` for an example)
 1. Install dependencies: `yarn` (or `npm i`)
 1. Run the development server with hot reloading: `yarn dev`
+1. Navigate to [localhost:3000](http://localhost:3000)
 1. To build the app and run in production mode: `yarn build && yarn start`
 
 ### Running tests
