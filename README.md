@@ -1,4 +1,4 @@
-# Unmock orb example
+# Unmock Orb example
 
 [![CircleCI](https://circleci.com/gh/unmock/unmock-orb-example.svg?style=svg)](https://circleci.com/gh/unmock/unmock-orb-example)
 
