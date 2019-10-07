@@ -19,8 +19,8 @@ jobs:
       - run: yarn
       - run: yarn build
       - run: yarn test
-      # - unmock/store:
-      #    file: "__unmock__/unmock-report.html"
+      - unmock/store:
+          file: "__unmock__/unmock-report.html"
       - unmock/upload:
           file: "__unmock__/unmock-report.html"
       - persist_to_workspace:
