@@ -4,7 +4,7 @@
 #
 version: 2.1
 orbs:
-  unmock: unmock/unmock@0.0.11
+  unmock: unmock/unmock@volatile
 
 defaults: &defaults
   working_directory: ~/repo
