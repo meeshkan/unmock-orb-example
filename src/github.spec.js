@@ -1,4 +1,4 @@
-/* global describe, beforeAll, afterAll, beforeEach, it */
+/* global describe, beforeAll, afterAll, beforeEach, it, expect */
 import unmock, { transform } from 'unmock';
 import fetchGitHubRepos from './github';
 
@@ -16,5 +16,7 @@ describe('Fetching GitHub repositories', () => {
   it('fetches repositories', async () => {
     const repos = await fetchGitHubRepos();
     expect(repos.length).toBeGreaterThan(0);
+    const firstRepo = repos[0];
+    expect(firstRepo).toHaveProperty("name");
   });
 });
