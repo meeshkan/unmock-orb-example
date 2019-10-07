@@ -19,7 +19,8 @@ jobs:
       - run: yarn
       - run: yarn build
       - run: yarn test
-      - unmock/upload
+      - unmock/upload:
+          file: "__unmock__/test.html"
       - persist_to_workspace:
           root: ~/repo
           paths: .
