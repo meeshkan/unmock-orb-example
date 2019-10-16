@@ -34,7 +34,7 @@ jobs:
             mkdir -p __unmock__
             git submodule add -f https://github.com/ksaaskil/petstore.swagger.io.git __unmock__/petstore.swagger.io
       - unmock/start
-      - run: yarn test
+      # - run: yarn test
       - unmock/stop
 workflows:
   version: 2
