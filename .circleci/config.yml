@@ -4,7 +4,7 @@
 #
 version: 2.1
 orbs:
-  unmock: unmock/unmock@volatile
+  unmock: unmock/unmock@dev:0.0.14
 
 defaults: &defaults
   working_directory: ~/repo
@@ -23,9 +23,14 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  server:
+    <<: *defaults
+    steps:
+      - unmock/start
+      - unmock/stop
 
 workflows:
   version: 2
   test-and-build:
     jobs:
-      - build
+      - server
