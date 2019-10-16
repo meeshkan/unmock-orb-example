@@ -29,11 +29,12 @@ jobs:
       - checkout
       - run: yarn
       - run:
-          name: "Add __unmock__"
+          name: "Add __unmock__/petstore.swagger.io"
           command: |
             mkdir -p __unmock__
             git submodule add -f https://github.com/ksaaskil/petstore.swagger.io.git __unmock__/petstore.swagger.io
       - unmock/start
+      - unmock/call
       # - run: yarn test
       - unmock/stop
 workflows:
