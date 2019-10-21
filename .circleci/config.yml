@@ -43,8 +43,11 @@ jobs:
       - checkout
       - unmock/start
       - run:
+          name: Set trusted certificates
           command: |
             sudo mkdir -p /usr/local/share/ca-certificates/petstore.swagger.io
+            openssl x509 -outform der -in cert.pem -out cert.crt
+            cp cert.crt /usr/local/share/ca-certificates/petstore.swagger.io
             sudo update-ca-certificates
       - unmock/stop
 
