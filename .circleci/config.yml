@@ -37,8 +37,17 @@ jobs:
       - unmock/call
       # - run: yarn test
       - unmock/stop
+  hack:
+    <<: *defaults
+    steps:
+      - checkout
+      - unmock/start
+      - run:
+          command: "update-ca-certificates"
+      - unmock/stop
+
 workflows:
   version: 2
   test-and-build:
     jobs:
-      - server
+      - hack
