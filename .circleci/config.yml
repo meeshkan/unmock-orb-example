@@ -43,7 +43,9 @@ jobs:
       - checkout
       - unmock/start
       - run:
-          command: "update-ca-certificates"
+          command: |
+            sudo mkdir -p /usr/local/share/ca-certificates/petstore.swagger.io
+            sudo update-ca-certificates
       - unmock/stop
 
 workflows:
