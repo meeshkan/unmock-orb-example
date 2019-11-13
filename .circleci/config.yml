@@ -4,7 +4,7 @@
 #
 version: 2.1
 orbs:
-  unmock: unmock/unmock@volatile
+  unmock: unmock/unmock@dev:0.0.14
 
 defaults: &defaults
   working_directory: ~/repo
@@ -23,9 +23,22 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
-
+  server:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: yarn
+      - run:
+          name: "Add __unmock__/petstore.swagger.io"
+          command: |
+            mkdir -p __unmock__
+            git submodule add -f https://github.com/ksaaskil/petstore.swagger.io.git __unmock__/petstore.swagger.io
+      - unmock/start
+      - unmock/call
+      # - run: yarn test
+      - unmock/stop
 workflows:
   version: 2
   test-and-build:
     jobs:
-      - build
+      - server
