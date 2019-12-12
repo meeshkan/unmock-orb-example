@@ -2,4 +2,5 @@ node_modules
 dist
 test
 .env
-__unmock__/
+__unmock__/*.html
+__unmock__/*.log
