@@ -57,5 +57,8 @@
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-node-externals": "^1.7.2"
+  },
+  "resolutions": {
+    "serialize-javascript": "^2.1.1"
   }
 }
